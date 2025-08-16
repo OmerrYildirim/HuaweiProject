@@ -1,53 +1,49 @@
-Semantic Segmentation Project
+# Semantic Segmentation Project
 
-Bu proje, derin öğrenme tabanlı görüntü segmentasyonu yöntemlerini incelemek amacıyla hazırlanmıştır. Farklı derin öğrenme mimarileri kullanılarak semantik segmentasyon problemleri üzerinde deneyler yapılmış ve elde edilen sonuçlar karşılaştırılmıştır.
+This project aims to explore deep learning-based image segmentation
+methods. Different architectures were implemented to solve semantic
+segmentation problems, and their results were compared.
 
-📌 Kullanılan Modeller
+## 📌 Models Used
 
-Projede aşağıdaki derin öğrenme tabanlı segmentasyon mimarileri uygulanmıştır:
+The following deep learning-based segmentation architectures were
+implemented in this project:
 
-- FCN (Fully Convolutional Network)
+-   **FCN (Fully Convolutional Network)**
+-   **UNet**
+-   **PSPNet (Pyramid Scene Parsing Network)**
+-   **DeepLabv3**
 
-- UNet
+Each model was trained, validated, and tested, and their results were
+recorded.
 
-- PSPNet (Pyramid Scene Parsing Network)
+## ⚙️ Technologies
 
-- DeepLabv3
+-   **Python 3.x**
+-   **PyTorch** -- Model definition and training
+-   **Torchvision** -- Pretrained models and data transformations
+-   **Matplotlib & Seaborn** -- Visualization
+-   **NumPy & Pandas** -- Data processing
 
-Her bir model için eğitim, doğrulama ve test süreçleri yürütülmüş, sonuçlar kaydedilmiştir.
+## 📊 Training Process
 
-⚙️ Teknolojiler
+-   The dataset was split into **80% training** and **20% validation**.\
+-   DataLoader was used to efficiently feed the data to the models.\
+-   **Early Stopping** was applied to avoid overfitting.\
+-   At the end of training, metrics such as **Precision, Recall,
+    F1-Score, Accuracy, and IoU** were calculated.
 
-Python 3.x
+## 🖼️ Visualization of Results
 
-PyTorch – Derin öğrenme modellerinin tanımlanması ve eğitimi
+The outputs of the models were visualized by showing the original
+images, ground truth masks, and predicted masks side by side.
 
-Torchvision – Hazır modeller ve veri dönüşümleri
+## 📈 Evaluation
 
-Matplotlib & Seaborn – Görselleştirme
-
-NumPy & Pandas – Veri işleme
-
-📊 Eğitim Süreci
-
-Veri seti eğitim (%80) ve doğrulama (%20) olarak ikiye ayrılmıştır.
-
-DataLoader ile veriler modele uygun şekilde hazırlanmıştır.
-
-Early Stopping mekanizması uygulanarak aşırı öğrenme (overfitting) engellenmiştir.
-
-Eğitim sonunda her model için Precision, Recall, F1-Score, Accuracy, IoU metrikleri hesaplanmıştır.
-
-🖼️ Sonuçların Görselleştirilmesi
-
-Model çıktıları, gerçek maskeler ve tahmin maskeleri yan yana gösterilmiştir. Aşağıda örnek bir çıktı yer almaktadır:
-
-📈 Değerlendirme
-
-FCN: Basit yapısı ile hızlı ancak doğruluk oranı diğer modellere göre daha düşüktür.
-
-UNet: Özellikle medikal görüntülerde başarılı sonuçlar vermiştir.
-
-PSPNet: Çok ölçekli özellik çıkarımı sayesinde daha iyi segmentasyon sağlamıştır.
-
-DeepLabv3: En yüksek başarıyı elde eden model olmuştur.
+-   **FCN**: Simple architecture, fast, but lower accuracy compared to
+    other models.\
+-   **UNet**: Performed particularly well in medical imaging tasks.\
+-   **PSPNet**: Achieved better segmentation results thanks to
+    multi-scale feature extraction.\
+-   **DeepLabv3**: Achieved the **highest performance** among the
+    models.
