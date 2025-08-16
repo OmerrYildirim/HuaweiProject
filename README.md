@@ -1,4 +1,4 @@
-# Semantic Segmentation Project
+<img width="730" height="203" alt="image" src="https://github.com/user-attachments/assets/d93b85f0-e97c-42bb-8001-e027c7f2d604" /># Semantic Segmentation Project
 
 This project aims to explore deep learning-based image segmentation
 methods. Different architectures were implemented to solve semantic
@@ -34,9 +34,13 @@ recorded.
     F1-Score, Accuracy, and IoU** were calculated.
 
 ## 🖼️ Visualization of Results
+<img width="916" height="374" alt="image" src="https://github.com/user-attachments/assets/6e6c1c5a-8c8a-42aa-b8db-573061e0609a" />
+<img width="842" height="361" alt="image" src="https://github.com/user-attachments/assets/e6d69387-4ec3-4d1f-99a9-ca3ada92a95e" />
+<img width="781" height="318" alt="image" src="https://github.com/user-attachments/assets/972d0fe1-d4cd-44e3-ad87-092d2e3456a8" />
+<img width="667" height="309" alt="image" src="https://github.com/user-attachments/assets/1b60ddf9-9f74-41fb-997a-42240619a5fd" />
+<img width="730" height="203" alt="image" src="https://github.com/user-attachments/assets/fd9f69e8-a33f-4825-a123-9735b25bdd21" />
 
-The outputs of the models were visualized by showing the original
-images, ground truth masks, and predicted masks side by side.
+
 
 ## 📈 Evaluation
 
