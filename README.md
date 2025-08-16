@@ -1,72 +1,53 @@
-🧠 Semantic Segmentation on LoveDA Dataset
-📌 Project Overview
+Semantic Segmentation Project
 
-This project focuses on semantic segmentation using multiple deep learning models on the LoveDA dataset.
-The aim is to assign each pixel of an aerial image to one of the land-cover categories, such as Building, Road, Water, Forest, Agriculture, Barren, Background.
+Bu proje, derin öğrenme tabanlı görüntü segmentasyonu yöntemlerini incelemek amacıyla hazırlanmıştır. Farklı derin öğrenme mimarileri kullanılarak semantik segmentasyon problemleri üzerinde deneyler yapılmış ve elde edilen sonuçlar karşılaştırılmıştır.
 
-We implemented and compared four state-of-the-art segmentation architectures and evaluated their performance both quantitatively and qualitatively.
+📌 Kullanılan Modeller
 
-🚀 Models Implemented
+Projede aşağıdaki derin öğrenme tabanlı segmentasyon mimarileri uygulanmıştır:
 
-The following segmentation models were trained and compared:
+- FCN (Fully Convolutional Network)
 
-UNet
+- UNet
 
-FCN (ResNet50 backbone)
+- PSPNet (Pyramid Scene Parsing Network)
 
-DeepLabv3 (ResNet50 backbone)
+- DeepLabv3
 
-PSPNet (ResNet50 backbone)
+Her bir model için eğitim, doğrulama ve test süreçleri yürütülmüş, sonuçlar kaydedilmiştir.
 
-⚙️ Methodology
+⚙️ Teknolojiler
 
-Dataset:
+Python 3.x
 
-LoveDA dataset with images and segmentation masks.
+PyTorch – Derin öğrenme modellerinin tanımlanması ve eğitimi
 
-Images resized to 256x256.
+Torchvision – Hazır modeller ve veri dönüşümleri
 
-Masks resized with nearest-neighbor interpolation to preserve class integrity.
+Matplotlib & Seaborn – Görselleştirme
 
-Data split: 80% training, 20% validation.
+NumPy & Pandas – Veri işleme
 
-Training Setup:
+📊 Eğitim Süreci
 
-Framework: PyTorch
+Veri seti eğitim (%80) ve doğrulama (%20) olarak ikiye ayrılmıştır.
 
-Loss Function: CrossEntropyLoss
+DataLoader ile veriler modele uygun şekilde hazırlanmıştır.
 
-Optimizer: Adam
+Early Stopping mekanizması uygulanarak aşırı öğrenme (overfitting) engellenmiştir.
 
-Early stopping applied to avoid overfitting.
+Eğitim sonunda her model için Precision, Recall, F1-Score, Accuracy, IoU metrikleri hesaplanmıştır.
 
-Evaluation Metrics:
+🖼️ Sonuçların Görselleştirilmesi
 
-Accuracy
+Model çıktıları, gerçek maskeler ve tahmin maskeleri yan yana gösterilmiştir. Aşağıda örnek bir çıktı yer almaktadır:
 
-Precision
+📈 Değerlendirme
 
-Recall
+FCN: Basit yapısı ile hızlı ancak doğruluk oranı diğer modellere göre daha düşüktür.
 
-F1-Score
+UNet: Özellikle medikal görüntülerde başarılı sonuçlar vermiştir.
 
-IoU (Intersection over Union)
+PSPNet: Çok ölçekli özellik çıkarımı sayesinde daha iyi segmentasyon sağlamıştır.
 
-Visualization:
-
-Side-by-side display of:
-
-Original Image
-
-Ground Truth Mask
-
-Predicted Mask
-
-Custom color palette and legend for class interpretation.
-
-📊 Results
-Model	Accuracy	F1 Score	Precision	Recall	IoU
-UNet	0.8146	0.8123	0.8345	0.8092	0.6951
-FCN-ResNet50	0.8948	0.9049	0.9046	0.9052	0.8292
-DeepLabv3	0.8939	0.9020	0.8938	0.9113	0.8240
-PSPNet	0.8214	0.8398	0.8410	0.8416	0.7302
+DeepLabv3: En yüksek başarıyı elde eden model olmuştur.
